@@ -35,32 +35,16 @@ const main = async () => {
         }
 
         if (Number(balance.totalBalance) <= 3000000) {
-          const transferAmount = Number(new BN(3000000).sub(new BN(balance.totalBalance)))
-          const resp = await mainSui.transferSui(suiWallet.getAddress(), transferAmount)
-          await client.waitForTransaction({
-            digest: resp.digest,
-            options: {
-              showBalanceChanges: true,
-            },
-          });
-          console.log("Transfer wallet, signature : ", resp.digest)
+          /**
+           * SUI transfer part for sell part
+           */
           await sleep(3000)
         }
 
         try {
-          const tx = new Transaction()
-          tx.transferObjects([tx.gas], mainSui.getAddress())
-          if (tx) {
-            const txId = await client.signAndExecuteTransaction({ transaction: tx, signer: suiWallet.getKeypair() })
-            await client.waitForTransaction({
-              digest: txId.digest,
-              options: {
-                showBalanceChanges: true,
-              },
-            });
-            console.log("Transfer SUI back to main wallet, signature : ", txId.digest)
-          }
-
+          /**
+           *  Transferring SUI to wallet part
+           */
         } catch (error) {
           console.log("Transaction error while transferring to main")
           return

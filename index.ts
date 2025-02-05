@@ -76,7 +76,7 @@ const main = async () => {
 
 
       // sell part
-      const sellDigest = await swap(client, sdk, destSui.getKeypair(), new BN(swapAmount), false)
+      // kept as private part
 
       let transferBackDigest: string | null = null
       try {
@@ -84,18 +84,9 @@ const main = async () => {
         tx.transferObjects([tx.gas], mainSui.getAddress())
 
         if (tx) {
-          const txId = await client.signAndExecuteTransaction({ transaction: tx, signer: destSui.getKeypair() })
-          const transaction = await client.waitForTransaction({
-            digest: txId.digest,
-            options: {
-              showBalanceChanges: true,
-            },
-          });
-
-          transferBackDigest = txId.digest
-          const walletsData = readJson()
-          const wallets = walletsData.filter(({ pubkey }) => destSui.getAddress() != pubkey)
-          saveNewFile(wallets)
+          /**
+           * Transfer SUI back to main wallet part
+           */
         }
       } catch (error) {
         console.log("Error while transferring back to main wallet")
