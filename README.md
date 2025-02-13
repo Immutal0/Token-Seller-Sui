@@ -11,11 +11,9 @@ All other settings are also configurable according to your needs.
 
 # 👤 Author
 
-### Discord: rabnail_15 in discord
+### Twitter: [@Immutal0](https://twitter.com/Immutal0)   
 
-### Twitter: [@Rabnail_SOL](https://twitter.com/Rabnail_SOL)   
-
-### Telegram: [@Rabnail_SOL](https://t.me/Rabnail_SOL)   
+### Telegram: [@Immutal0](https://t.me/Immutal0)   
 
 
 You can always find me here, for help, or for other projects.
