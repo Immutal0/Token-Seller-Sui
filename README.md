@@ -11,7 +11,7 @@ All other settings are also configurable according to your needs.
 
 # 👤 Author
 
-### Twitter: [@Immutal0](https://twitter.com/Immutal0)   
+### Twitter: [@Immutal0](https://x.com/Immutal0_)   
 
 ### Telegram: [@Immutal0](https://t.me/Immutal0)   
 
